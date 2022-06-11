@@ -100,3 +100,36 @@ Lengkapi kode program untuk menu lainnya yang ada pada **Controller Page**, sehi
 
 <img width="960" alt="SS 19 lab web 11" src="https://user-images.githubusercontent.com/73053784/171126486-b752e2cb-2d4c-4c7a-ab16-838b9a8a5ed5.png">
 
+# Praktikum 12: Framework Lanjutan (CRUD) - Pemrograman Web
+## Langkah-langkah Praktikum
+### Persiapan
+Untuk memulai membuat aplikasi CRUD sederhana, yang perlu disiapkan adalah database server menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan melalui XAMPP seperti berikut.
+<img width="960" alt="SS 1 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177512-23753f91-1725-4a78-a258-b22121d9bab6.png">
+
+### Langkah 1
+Membuat database kemudian membuat Tabel dan masukkan kode pada database query seperti berikut.
+<img width="960" alt="SS 2 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177851-251b2d7e-f9d7-4609-be26-771195783d9c.png">
+
+
+### Langkah 2
+#### Konfigurasi koneksi database
+Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Kemudian melakukan konfigurasi dengan cara mengubah beberapa kode pada file `htdocs\lab11_php_ci\ci4\.env.` Lalu cari pada line **DATABASE** dan hilangkan tanda pagar (`#`) didepan seperti berikut ini. 
+
+<img width="960" alt="SS 3 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177553-928e9ea5-70a7-47ce-8ff9-7806226f5b14.png">
+
+### Langkah 3
+#### Membuat Model
+Selanjutnya adalah membuat Model untuk memproses data **Artikel**. Buat file baru pada direktori **app/Models** dengan nama **ArtikelModel.php** lalu masukkan kode seperti berikut.
+<img width="960" alt="SS 4 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177579-de9ec6e1-54f5-4934-bd10-a7b84c842a67.png">
+
+### Langkah 4
+#### Membuat Controller
+Buat `Controller` baru dengan nama **Artikel.php** pada direktori **app/Controllers** lalu masukkan kode seperti berikut. 
+<img width="960" alt="SS 5 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177590-7d7731fb-a924-43ef-9e05-2b60fa327ac9.png">
+
+### Langkah 5
+#### Membuat View
+Buat folder baru dengan nama **artikel** pada direktori **app/views**, kemudian buat file baru dengan nama **index.php** seperti berikut.
+<img width="960" alt="SS 6 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177605-389844f9-edf4-49c9-a46b-95f326e00f83.png">
+
+
