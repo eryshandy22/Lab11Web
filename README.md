@@ -177,5 +177,44 @@ Dan yang terakhir buat file baru lagi dengan nama **admin.css** pada direktori *
 <img width="960" alt="SS 18 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609707-2be2dfe8-3290-4c94-9f1e-1b16d8905173.png">
 <img width="960" alt="SS 19 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609717-05c2885e-1efe-4b52-a8d0-327160ec1285.png">
 
+Kemudian akses menu admin dengan url http://localhost:8080/admin/artikel seperti berikut.
+
+<img width="494" alt="SS 20 lab web 12" src="https://user-images.githubusercontent.com/73053784/174626742-45e57c5e-b4e3-4ade-a5f7-b73b17471640.png">
+
+### Langkah 10
+#### Menambah Data Artikel
+Tambahkan fungsi/method baru pada **Controller Artikel** dengan nama **add()** seperti berikut.
+<img width="960" alt="SS 21 lab web 12" src="https://user-images.githubusercontent.com/73053784/174626923-8ecd5952-8896-4839-b8b1-c612bdee54c9.png">
+
+Kemudian buat `view` untuk form tambah dengan nama **form_add.php** seperti berikut.
+<img width="960" alt="SS 22 lab web 12" src="https://user-images.githubusercontent.com/73053784/174627050-845f7419-da39-467b-a8cd-f8d08a20fb09.png">
+
+Setelah itu, lalu klik **Tambah Artikel** pada menu **Halaman Admin** Maka hasilnya akan seperti berikut.
+
+<img width="495" alt="SS 23 lab web 12" src="https://user-images.githubusercontent.com/73053784/174627172-c99aa590-e18b-43f7-9774-4cf7d7b800ad.png">
+
+### Langkah 11
+#### Mengubah Data
+Tambahkan fungsi/method baru pada **Controller Artikel** dengan nama **edit()** seperti berikut.
+<img width="960" alt="SS 24 lab web 12" src="https://user-images.githubusercontent.com/73053784/174627270-c20ed204-e1d3-402f-9e40-8392aa97b3b0.png">
+
+Kemudian buat `view` untuk form tambah dengan nama **form_edit.php**
+<img width="960" alt="SS 25 lab web 12" src="https://user-images.githubusercontent.com/73053784/174627424-aed6480f-e9af-4aa4-9dfe-307f08b5b9d5.png">
+
+Setelah itu, lalu klik **Ubah** pada salah satu judul artikel, maka hasilnya akan seperti berikut.
+
+<img width="499" alt="SS 26 LAB WEB 12" src="https://user-images.githubusercontent.com/73053784/174627536-9edcad77-23d3-4bed-b2c8-d0c50a7e5f5f.png">
+
+### Langkah 12
+#### Menghapus Data
+Tambahkan fungsi/method baru pada **Controller Artikel** dengan nama **delete()** seperti berikut. 
+<img width="960" alt="SS 27 lab web 12" src="https://user-images.githubusercontent.com/73053784/174627665-dc7c3fa0-da57-4eec-8700-f3df28aa7f18.png">
+
+# Praktikum 13: Framework Lanjutan (Modul Login)
+## Langkah-langkah Praktikum
+### Persiapan
+Untuk memulai membuat modul Login, yang perlu dipersiapkan adalah database server menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan melalui XAMPP seperti berikut.
+
+
 
 
