@@ -132,4 +132,50 @@ Buat `Controller` baru dengan nama **Artikel.php** pada direktori **app/Controll
 Buat folder baru dengan nama **artikel** pada direktori **app/views**, kemudian buat file baru dengan nama **index.php** seperti berikut.
 <img width="960" alt="SS 6 lab web 12" src="https://user-images.githubusercontent.com/73053784/173177605-389844f9-edf4-49c9-a46b-95f326e00f83.png">
 
+Selanjutnya buka browser kembali, dengan mengakses url http://localhost:8080/artikel maka hasilnya akan seperti berikut.
+<img width="960" alt="SS 7 lab web 12" src="https://user-images.githubusercontent.com/73053784/174608030-9d182999-4417-4a56-8b98-1b2baeee45f9.png">
+
+Terlihat belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada database query agar dapat ditampilkan datanya seperti berikut.
+<img width="960" alt="SS 8 lab web 12" src="https://user-images.githubusercontent.com/73053784/174608388-d9ec88af-543c-4118-b975-09d59116c1d0.png">
+
+Lalu refresh kembali browser, sehingga akan ditampilkan hasilnya seperti berikut.
+<img width="960" alt="SS 9 lab web 12" src="https://user-images.githubusercontent.com/73053784/174608539-9efce80a-9914-4c95-9d9c-9a126491d99a.png">
+
+### Langkah 6
+#### Membuat Tampilan Detail Artikel
+Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada **Controller Artikel** dengan nama **view()** seperti berikut.
+<img width="960" alt="SS 10 lab web 12" src="https://user-images.githubusercontent.com/73053784/174608681-f6c0338e-f53c-40a8-9c31-30197e759ed6.png">
+
+### Langkah 7
+#### Membuat View Detail
+Buat view baru untuk halaman detail dengan nama **app/views/artikel/detail.php** seperti berikut.
+<img width="960" alt="SS 11 lab web 12" src="https://user-images.githubusercontent.com/73053784/174608831-2299966b-d8cd-4875-b0ce-dd1ea2ec52fb.png">
+
+### Langkah 8
+#### Membuat Routing untuk artikel detail
+Buka kembali file **app/config/Routes.php**, kemudian tambahkan `routing` untuk `artikel detail` maka hasilnya akan seperti berikut.
+<img width="960" alt="SS 12 lab web 12" src="https://user-images.githubusercontent.com/73053784/174608935-347bc7e4-9f17-41fe-b656-716c4a8aba9f.png">
+
+### Langkah 9
+#### Membuat Menu Admin
+Menu `admin` adalah untuk proses `CRUD` data `artikel`. Buat method baru pada **Controller Artikel** dengan nama **admin_index()** seperti berikut.
+<img width="960" alt="SS 13 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609063-9308c5a3-2a63-4725-9a7e-86c7df359850.png">
+
+Selanjutnya buat `view` untuk tampilan `admin` dengan nama **admin_index.php** seperti berikut.
+<img width="960" alt="SS 14 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609182-3529237e-54bf-4d6c-a9ae-3ce0952874c4.png">
+
+Setelah itu tambahkan **routing** untuk menu `admin` seperti berikut.
+<img width="960" alt="SS 15 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609330-804e14d7-5163-4ef6-ba4f-743be33c04d9.png">
+
+Setelah itu buat `template header dan footer` baru untuk `Halaman Admin.` Kemudian buat file baru dengan nama **admin_header.php** pada direktori app/view/template seperti berikut.
+<img width="960" alt="SS 16 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609462-837d25f2-d8e5-4009-8be1-de53e6d77168.png">
+
+Lalu buat file baru lagi dengan nama **admin_footer.php** pada direktori **app/view/template** seperti berikut.
+<img width="960" alt="SS 17 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609587-498992f3-6629-4305-b3de-e9010db0f946.png">
+
+Dan yang terakhir buat file baru lagi dengan nama **admin.css** pada direktori **ci4/public** untuk memperindah tampilan Halaman Admin seperti berikut.
+<img width="960" alt="SS 18 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609707-2be2dfe8-3290-4c94-9f1e-1b16d8905173.png">
+<img width="960" alt="SS 19 lab web 12" src="https://user-images.githubusercontent.com/73053784/174609717-05c2885e-1efe-4b52-a8d0-327160ec1285.png">
+
+
 
