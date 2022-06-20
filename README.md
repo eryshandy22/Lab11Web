@@ -214,6 +214,28 @@ Tambahkan fungsi/method baru pada **Controller Artikel** dengan nama **delete()*
 ## Langkah-langkah Praktikum
 ### Persiapan
 Untuk memulai membuat modul Login, yang perlu dipersiapkan adalah database server menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan melalui XAMPP seperti berikut.
+<img width="960" alt="SS 1 lab web 13" src="https://user-images.githubusercontent.com/73053784/174628513-5dbdc930-e49f-4c66-bf28-6b4895d29fb0.png">
+
+### Langkah 1
+#### Membuat Tabel User
+Membuat tabel user pada database `lab_ci4` seperti berikut.
+<img width="960" alt="SS 2 lab web 13" src="https://user-images.githubusercontent.com/73053784/174628638-f561df36-3b4b-4156-8d75-b7d4dac8650a.png">
+
+### Langkah 2
+#### Membuat Model User
+Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada direktori **app/Models** dengan nama **UserModel.php** dan masukkan kode seperti berikut. 
+<img width="960" alt="SS 3 lab web 13" src="https://user-images.githubusercontent.com/73053784/174628734-6d048b49-1d40-47ed-8a33-63d6ca570713.png">
+
+### Langkah 3
+#### Membuat Controller User
+Buat Controller baru dengan nama **User.php** pada direktori **app/Controllers**. Kemudian tambahkan method **index()** untuk menampilkan daftar user, dan method **login()** untuk proses login dan masukkan kode seperti berikut.
+<img width="960" alt="SS 4 lab web 13" src="https://user-images.githubusercontent.com/73053784/174628912-e915a8d6-7094-4c31-9a1b-f69f9e1cb759.png">
+
+### Langkah 4
+#### Membuat View Login
+Buat folder baru dengan nama **user** pada direktori **app/views**, kemudian buat file baru dengan nama **login.php** dan masukkan kode seperti berikut.
+<img width="960" alt="SS 5 lab web 13" src="https://user-images.githubusercontent.com/73053784/174629035-eaed58c0-21f1-4217-b864-03d94f26e758.png">
+
 
 
 
