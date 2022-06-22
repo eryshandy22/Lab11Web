@@ -236,6 +236,131 @@ Buat Controller baru dengan nama **User.php** pada direktori **app/Controllers**
 Buat folder baru dengan nama **user** pada direktori **app/views**, kemudian buat file baru dengan nama **login.php** dan masukkan kode seperti berikut.
 <img width="960" alt="SS 5 lab web 13" src="https://user-images.githubusercontent.com/73053784/174629035-eaed58c0-21f1-4217-b864-03d94f26e758.png">
 
+### Langkah 5
+#### Membuat Database Seeder
+Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modul login, kita perlu memasukkan data user dan password kedalam database. Untuk itu buat database seeder untuk tabel user. Buka **CLI**, kemudian ketik perintah berikut:
+<img width="960" alt="SS 6 lab web 13" src="https://user-images.githubusercontent.com/73053784/174989919-90f3a2c1-5f76-4e84-ba3d-1bb24e54631c.png">
+
+Selanjutnya, buka file **UserSeeder.php** yang berada di lokasi direktori **/app/Database/Seeds/UserSeeder.php** kemudian isi dengan kode berikut:
+<img width="960" alt="SS 7 lab web 13" src="https://user-images.githubusercontent.com/73053784/174990412-22ff9cd9-47f2-4344-9c74-2826faa221b7.png">
+
+Selanjutnya buka kembali CLI dan ketik perintah berikut:
+
+<img width="561" alt="SS 8 lab web 13" src="https://user-images.githubusercontent.com/73053784/174990538-712e336a-ed7b-41c3-8eef-99e369cae76c.png">
+
+Selanjutnya buka url http://localhost:8080/user/login seperti berikut:
+
+<img width="280" alt="SS 9 lab web 13" src="https://user-images.githubusercontent.com/73053784/174991560-2ad56d4e-e135-4d19-8ef1-396f2407e981.png">
+
+Namun sebelum mengakses urlnya, pastikan untuk menjalankan perintah **php spark serve** terlebih dahulu untuk menjalankan program **ci4** di **port 8080** dengan cara membuka **CLI** kemudian ketik perintah berikut:
+<img width="960" alt="SS 10 lab web 13" src="https://user-images.githubusercontent.com/73053784/174992369-47027c24-d7d6-4905-bd1d-51cfcb793177.png">
+
+### Langkah 6
+#### Menambahkan Auth Filter
+Selanjutnya membuat filter untuk halaman admin. Buat file baru dengan nama **Auth.php** pada direktori **app/Filters** dan masukkan kode seperti berikut.
+<img width="960" alt="SS 11 lab web 13" src="https://user-images.githubusercontent.com/73053784/174992556-5f5e77cc-3ad1-45dd-80f9-9ffd06254b7e.png">
+
+Selanjutnya buka file **app/Config/Filters.php** tambahkan kode berikut:
+<img width="960" alt="SS 12 lab web 13" src="https://user-images.githubusercontent.com/73053784/174992692-04eda861-9f91-4c4b-86d8-fa053d9dbee4.png">
+
+Selanjutnya buka file **app/Config/Routes.php** dan sesuaikan kodenya seperti berikut.
+<img width="960" alt="SS 13 lab web 13" src="https://user-images.githubusercontent.com/73053784/174992907-08d86b8c-1c51-42d2-9338-a98562a99e8d.png">
+
+### Langkah 7
+#### Fungsi Logout
+Tambahkan method logout pada **Controller User** dan masukkan kode seperti berikut:
+<img width="960" alt="SS 14 lab web 13" src="https://user-images.githubusercontent.com/73053784/174993119-2b72e775-66ae-47fa-a323-cef64815e325.png">
+
+### Langkah 8
+#### Tombol Logout
+Menambahkan tombol **Logout** pada menu **header admin** dengan cara ke direktori **app\view\template** lalu buka file **admin_header.php** dan masukkan kode seperti berikut.
+<img width="960" alt="SS 15 lab web 13" src="https://user-images.githubusercontent.com/73053784/174994539-5f1f9f69-e5fe-4e7f-97e1-93a82443e89f.png">
+
+Selanjutnya, tambahkan route logout dengan cara ke direktori **app\Config\Routes.php** dan masukkan kode seperti berikut.
+<img width="960" alt="SS 16 lab web 13" src="https://user-images.githubusercontent.com/73053784/174995845-9cafa6ce-d90e-457b-b3f8-1f303f9ca2f0.png">
+
+Setelah semuanya selesai, maka lakukan percobaan untuk mengakses menu admin dengan cara buka url dengan alamat http://localhost:8080/admin/artikel ketika alamat tersebut diakses, maka akan muncul halaman login seperti berikut.
+
+<img width="633" alt="SS 17 lab web 13" src="https://user-images.githubusercontent.com/73053784/174995702-3af089d4-c81a-436b-9c22-2e367fd0b069.png">
+
+Berikut adalah halaman utama (menu admin) yang sudah ditambahkan tombol **Logout** untuk keluar dari menu ini dan kembali ke menu **Login**.
+
+<img width="509" alt="SS 18 lab web 13" src="https://user-images.githubusercontent.com/73053784/174996799-e0ea5041-1aa0-494b-8f5b-9833eb5f22d2.png">
+
+# Praktikum 14: Pagination dan Pencarian
+## Langkah-langkah Praktikum
+### Persiapan
+Hal pertama yang dilakukan adalah menjalankan Apache & MySQL server di XAMPP seperti berikut.
+<img width="960" alt="XAMPP" src="https://user-images.githubusercontent.com/73053784/174997600-61b85211-e469-4450-837e-5e82d6b7c172.png">
+
+### Langkah 1
+#### Membuat Pagination
+Pagination merupakan proses yang digunakan untuk membatasi tampilan yang panjang dari data yang banyak pada sebuah website. Fungsi pagination adalah memecah tampilan menjadi beberapa halaman tergantung banyaknya data yang akan ditampilkan pada setiap halaman. Untuk membuat pagination, buka Kembali **Controller Artikel** pada direktori **(htdocs\Lab11_php_ci\ci4\Controllers\Artikel.php)**, kemudian modifikasi kode pada method **admin_index** seperti berikut.
+<img width="960" alt="SS 2 lab web 14" src="https://user-images.githubusercontent.com/73053784/174998079-dd174bff-11ce-4699-8ba0-d8a02d06b13c.png">
+
+Kemudian buka file **views/artikel/admin_index.php** dan tambahkan kode seperti berikut dibawah deklarasi tabel data.
+<img width="960" alt="SS 3 lab web 14" src="https://user-images.githubusercontent.com/73053784/174998264-0162abe2-628e-44b8-8f65-37b77090250a.png">
+
+Setelah itu untuk melihat hasilnya, buka kembali menu **Dashboard** yang berisi daftar artikel maka hasilnya akan seperti berikut.
+
+<img width="497" alt="SS 4 lab web 14" src="https://user-images.githubusercontent.com/73053784/175000052-48f68939-b504-4454-8543-0f5ffa0134ae.png">
+
+### Langkah 2
+#### Membuat Pencarian
+Pencarian data digunakan untuk memfilter data. Untuk membuat pencarian data, buka kembali **Controller Artikel** pada direktori **(htdocs\Lab11_php_ci\ci4\Controllers\Artikel.php)**, pada method **admin_index** dan ubah kodenya seperti berikut.
+
+<img width="720" alt="SS 5 lab web 14" src="https://user-images.githubusercontent.com/73053784/175001101-47f0f9d6-5c44-49ae-9fee-84a12c638ea4.png">
+
+Kemudian buka kembali file **views/artikel/admin_index.php** dan tambahkan form pencarian sebelum deklarasi tabel seperti berikut:
+<img width="960" alt="SS 6 lab web 14" src="https://user-images.githubusercontent.com/73053784/175001377-3746d467-4585-483e-a937-9bc3d0237ce7.png">
+
+Dan pada link pager ubah seperti berikut.
+<img width="960" alt="SS 7 lab web 14" src="https://user-images.githubusercontent.com/73053784/175001605-33a968f3-f305-4a9b-af14-8b6f7806a921.png">
+
+Selanjutnya ujicoba dengan membuka kembali halaman admin artikel, masukkan kata kunci tertentu pada form pencarian seperti berikut.
+
+<img width="500" alt="SS 8 lab web 14" src="https://user-images.githubusercontent.com/73053784/175001782-0e135d73-2d80-4fd0-a238-2d3617b4faaf.png">
+
+### Langkah 3
+#### Upload Gambar
+Menambahkan fungsi unggah gambar pada tambah artikel. Buka kembali **Controller Artikel** pada direktori **(htdocs\Lab11_php_ci\ci4\Controllers\Artikel.php)**, sesuaikan kode pada method **add** seperti berikut.
+<img width="960" alt="SS 9 lab web 14" src="https://user-images.githubusercontent.com/73053784/175001926-a39be505-2d51-492a-b82c-f17fb6184940.png">
+
+Kemudian pada file **views/artikel/form_add.php** tambahkan field input, lalu sesuaikan tag form dengan menambahkan ecrypt type seperti berikut.
+<img width="960" alt="SS 10 lab web 14" src="https://user-images.githubusercontent.com/73053784/175002126-dee9149f-6cae-4ea9-9950-5d48c1fe9d86.png">
+
+Setelah itu untuk mengetahui hasilnya, ujicoba file upload dengan mengakses menu tambah artikel seperti berikut.
+
+<img width="495" alt="SS 11 lab web 14" src="https://user-images.githubusercontent.com/73053784/175002233-609a5cba-fa29-4c32-8733-9f888b2195be.png">
+
+Berikut adalah hasil dari artikel yang diupload dengan gambar.
+
+<img width="497" alt="SS 12 lab web 14" src="https://user-images.githubusercontent.com/73053784/175002323-0c472d40-2449-411d-a96b-20281a60a877.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
